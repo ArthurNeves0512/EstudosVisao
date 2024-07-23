@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project(vizinhos)
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( vizinhos vizinhos.cpp )
+target_link_libraries( vizinhos ${OpenCV_LIBS} )
