@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/arthur/Projects/EstudosVisaoComputacional/PropriedadeVi
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vizinhos
+# Target rules for targets named labeling
 
 # Build rule for target.
-vizinhos: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vizinhos
-.PHONY : vizinhos
+labeling: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 labeling
+.PHONY : labeling
 
 # fast build rule for target.
-vizinhos/fast:
-	$(MAKE) -f CMakeFiles/vizinhos.dir/build.make CMakeFiles/vizinhos.dir/build
-.PHONY : vizinhos/fast
+labeling/fast:
+	$(MAKE) -f CMakeFiles/labeling.dir/build.make CMakeFiles/labeling.dir/build
+.PHONY : labeling/fast
 
-vizinhos.o: vizinhos.cpp.o
+labeling.o: labeling.cpp.o
 
-.PHONY : vizinhos.o
+.PHONY : labeling.o
 
 # target to build an object file
-vizinhos.cpp.o:
-	$(MAKE) -f CMakeFiles/vizinhos.dir/build.make CMakeFiles/vizinhos.dir/vizinhos.cpp.o
-.PHONY : vizinhos.cpp.o
+labeling.cpp.o:
+	$(MAKE) -f CMakeFiles/labeling.dir/build.make CMakeFiles/labeling.dir/labeling.cpp.o
+.PHONY : labeling.cpp.o
 
-vizinhos.i: vizinhos.cpp.i
+labeling.i: labeling.cpp.i
 
-.PHONY : vizinhos.i
+.PHONY : labeling.i
 
 # target to preprocess a source file
-vizinhos.cpp.i:
-	$(MAKE) -f CMakeFiles/vizinhos.dir/build.make CMakeFiles/vizinhos.dir/vizinhos.cpp.i
-.PHONY : vizinhos.cpp.i
+labeling.cpp.i:
+	$(MAKE) -f CMakeFiles/labeling.dir/build.make CMakeFiles/labeling.dir/labeling.cpp.i
+.PHONY : labeling.cpp.i
 
-vizinhos.s: vizinhos.cpp.s
+labeling.s: labeling.cpp.s
 
-.PHONY : vizinhos.s
+.PHONY : labeling.s
 
 # target to generate assembly for a file
-vizinhos.cpp.s:
-	$(MAKE) -f CMakeFiles/vizinhos.dir/build.make CMakeFiles/vizinhos.dir/vizinhos.cpp.s
-.PHONY : vizinhos.cpp.s
+labeling.cpp.s:
+	$(MAKE) -f CMakeFiles/labeling.dir/build.make CMakeFiles/labeling.dir/labeling.cpp.s
+.PHONY : labeling.cpp.s
 
 # Help Target
 help:
@@ -156,12 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... vizinhos"
-	@echo "... vizinhos.o"
-	@echo "... vizinhos.i"
-	@echo "... vizinhos.s"
+	@echo "... edit_cache"
+	@echo "... labeling"
+	@echo "... labeling.o"
+	@echo "... labeling.i"
+	@echo "... labeling.s"
 .PHONY : help
 
 
