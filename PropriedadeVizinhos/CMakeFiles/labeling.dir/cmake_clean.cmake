@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/labeling.dir/labeling.cpp.o"
+  "CMakeFiles/labeling.dir/labeling.cpp.o.d"
   "labeling"
   "labeling.pdb"
 )
